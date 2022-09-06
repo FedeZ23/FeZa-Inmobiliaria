@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+html {
+   scroll-behavior: smooth; 
+   scroll-padding-top: 100px;
+}
+
+:root {
+    --grey: rgb(189, 186, 186);
+    --black: black;
+    --blue: rgb(80, 44, 165);
+    --dark-grey: rgb(85, 83, 83);
+}
+
+.section-container {
+    background-color: var(--grey);
+}
+
+body {
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 70px 0px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+button {
+    background-color: var(--blue);
+    border: 0px solid white;
+    outline: none;
+    width: 210px;
+    height: 65px;
+    color: whitesmoke;
+    font-weight: 700px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: rgb(49, 146, 62);
+    transition: all 0.5s linear;
+    color: white;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 35px;
+    color: var(--blue);
+    display: flex;
+}
+
+.title {
+    display: flex;
+}
+
+.section-p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h1 {
+    color: var(--blue);
+}
+
+h2 {
+    font-size: 27px;
+    font-weight: 500;
+    color: white;
+    background-color: var(--blue);
+    padding: 2px 300px;
+}
+
+h3 {
+    font-size: 34px;
+    font-weight: 500;
+    margin: 10px 0px;
+    color: whitesmoke;
+}
+
+.header-container {
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+
+header {
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0px 30px;
+    
+}
+
+.logo-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 65%;
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list {
+    gap: 50px;
+}
+
+.navbar i {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.navbar a {
+    color: var(--blue);
+    font-size: 24px;
+}
+
+.navbar-list img {
+    height: 50px;
+    width: 60px;
+    border-radius: 100%;
+}
+
+.navbar-list li:first-child > a {
+    border: 2px solid rgba(150, 148, 148, 0.74);
+    padding: 8px 40px;
+    border-radius: 4px;
+    transition: all 0.4s linear;
+}
+
+.navbar-list li:first-child > a:hover {
+    background-color: white;
+    transition: all 0.4s linear;
+    font-weight: bold;
+}
+
+#hero {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 70px 50px;
+    
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.text-container {
+    max-width: max(40%, 400px);
+    
+}
+
+.text-container h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+}
+
+.text-container p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.hero-img {
+    background-image: url(./imagenes/oficina6.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 250px;
+    width: 30px;
+    height: 350px;
+    margin-right: 150px;
+}
+
+@media (max-width: 1000px) {
+    .hero-img {
+        display: none;
+    }
+    .description-container {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .header {
+        padding: opx 50px 0px 10px;
+    }
+
+    .navbar i {
+        display: block;
+    }
+
+    .navbar-list {
+        position: absolute;
+        background-color: var(--grey);
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        display: none;
+        z-index: 9999;
+        height: calc(100vh - 100px);
+    }
+
+    #toggle-menu:checked + .navbar-list {
+        display: flex;
+    }
+}
+
+#en-venta {
+    display: flex;
+    flex-direction: column;
+}
+
+#en-alquiler {
+    display: flex;
+    flex-direction: column;
+}
+
+.venta-cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 90px;
+    margin-top: 280px;
+    row-gap: 330px;
+}
+
+.venta-card {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--dark-grey); 
+    text-align: center;
+    width: 350px;
+    height: 190px;
+    position: relative;
+    padding-top: 20px; 
+    color: white;
+    
+}
+
+.venta-card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-size: cover;
+    width: 250px;
+    height: 150px;
+    top: -205px;
+    
+}
+
+.venta-card-img img {
+    width: 350px;
+    height: 263px;
+}
+
+@media (max-width: 992px) {
+    .venta-cards-container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 806px) {
+    h2 {
+        color: var(--blue);
+        background: none;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.divider {
+    width: min(90%, 600px);
+    margin-top: 100px;
+    height: 3px;
+    background-color: var(--dark-grey);
+}
+
+#sucursal {
+    display: flex;
+    flex-direction: column;
+}
+
+.sucursal-info {
+    display: flex;
+    align-items: center;
+    
+}
+
+.sucursal-info-p {
+    display: flex;
+    flex-direction: column;
+} 
+
+.sucursal-info p {
+    font-size: 27px;
+    width: 185px;
+    color: var(--dark-grey);
+    
+}
+
+.footer {
+    display: flex;
+    justify-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    
+    
+}
+
+.footer-info {
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9px;
+    row-gap: 8px;
+}
+
+.footer-social a {
+    margin-left: 15px;
+    color: black;
+    font-size: 19px;
+}
