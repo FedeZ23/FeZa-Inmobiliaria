@@ -250,6 +250,18 @@ header {
     #toggle-menu:checked + .navbar-list {
         display: flex;
     }
+
+    .sucursal-info {
+        width: 100%;
+        height: calc(100vh - 100px);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sucursal-info img {
+        display: none;
+    }
 }
 
 #en-venta {
@@ -357,7 +369,6 @@ header {
     max-width: 1300px;
     margin: 0 auto;
     
-    
 }
 
 .footer-info {
@@ -370,6 +381,7 @@ header {
     flex-direction: column;
     margin-top: 9px;
     row-gap: 8px;
+    margin-bottom: 22px;
 }
 
 .footer-social a {
