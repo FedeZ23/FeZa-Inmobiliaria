@@ -124,3 +124,22 @@ a:hover {
         text-align: center;
     }
 }
+
+@media (max-width: 392px) {
+    .logo-img img {
+        height: 50px;
+        width: 160px;
+        align-items: center;
+        justify-content: center;
+}
+
+@media (max-width: 264px) {
+    .logo-img img {
+        height: 25px;
+        width: 110px;
+    }
+    .button {
+        width: 155px;
+        height: 22px;
+    }
+}

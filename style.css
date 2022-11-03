@@ -391,3 +391,25 @@ header {
     color: black;
     font-size: 19px;
 }
+
+@media (max-width: 360px) {
+    .logo-container img {
+        height: 50px;
+        width: 160px;
+    }
+
+    .venta-card-img img {
+        width: 270px;
+        height: 183px;
+
+    }
+}
+
+@media (max-width: 280px) {
+    .venta-card-img img {
+        width: 230px;
+        height: 143px;
+
+    }
+}
+
